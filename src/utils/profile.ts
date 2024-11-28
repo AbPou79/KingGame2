@@ -1,4 +1,4 @@
-import wblt from "jsonwebtoken";
+import wblt from 'jsonwebtoken';
 import type { profileType } from "./types";
 
 export default function hasProfile(myToken: string, secret: string) {
