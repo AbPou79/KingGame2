@@ -4,17 +4,6 @@ import GameCard from '../components/GameCard.astro';
 import { Image } from 'astro:assets';
 import roles from '../roles.json';
 import { readdirSync } from 'fs';
-import Button from "../components/LogoutButton.astro";
-import hasProfile from "../utils/profile";
-
-const imageFolder = './public/';
-const imageFiles = readdirSync(imageFolder) ;
-const cookie: string = `${Astro.cookies.get(import.meta.env.COOKIE_NAME || "_Security_Login_")?.value}`;
-const d = hasProfile(cookie, import.meta.env.COOKIE_SECRET || "secret");
-
-if (d.success === false) {
-	return Astro.redirect("/login");
-}
 
 function findDescriptionForRole(imageName: string) {
 	const normalizedImageName = imageName.trim().normalize("NFC");
