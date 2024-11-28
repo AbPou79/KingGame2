@@ -1,0 +1,42 @@
+<form
+  action="/api/login"
+  accept-charset="UTF-8"
+  method="POST"
+  class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md space-y-6"
+>
+    <h1 class="text-2xl font-bold text-center text-gray-700">Login</h1>
+
+    <!-- Email Field -->
+    <div class="flex flex-col space-y-2">
+        <label for="email" class="text-sm font-medium text-gray-600">Email:</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          required
+          class="w-full px-4 py-2 border border-gray-300 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-blue-400"
+          placeholder="Enter your email"
+        />
+    </div>
+
+    <!-- Password Field -->
+    <div class="flex flex-col space-y-2">
+        <label for="password" class="text-sm font-medium text-gray-600">Password:</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          required
+          class="w-full px-4 py-2 border border-gray-300 text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+          placeholder="Enter your password"
+        />
+    </div>
+
+    <!-- Submit Button -->
+    <button
+      type="submit"
+      class="w-full py-2 bg-purple-700 text-white rounded-lg font-semibold hover:bg-purple-800 transition duration-300"
+    >
+        Submit
+    </button>
+</form>
